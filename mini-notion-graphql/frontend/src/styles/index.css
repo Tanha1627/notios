@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    background-color: #faf9f6;
+  }
+  body {
+    @apply bg-paper text-ink font-body antialiased;
+  }
+  ::selection {
+    @apply bg-pine-100;
+  }
+  :focus-visible {
+    outline: 2px solid #2f5d57;
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .input {
+    @apply w-full text-sm bg-surface border border-line rounded-card px-3 py-2 text-ink placeholder:text-subink/60 focus:border-pine-500 transition-colors;
+  }
+}
+
+@layer utilities {
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 8px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: #e4e0d8;
+    border-radius: 8px;
+  }
+}
